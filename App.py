@@ -454,7 +454,7 @@ with st.sidebar:
 # =============================
 
 st.title("📊 Adelanta BI – Reporte de Retomas")
-tab1 = st.tabs(["Colocación y Cobranza"])
+tab1 = st.tabs(["Colocación y Cobranza"])[0] 
 
 with tab1:
     st.subheader("Análisis de Saldos Diarios")
@@ -511,3 +511,4 @@ with tab1:
     st.markdown("### Detalle de Empresas (colocó/cobró)")
     emp = empresas_en_rango(df, tc, fi_sel, ff_sel, por="auto")
     st.dataframe(emp.drop(columns=["ColocoPEN","CobroPEN","GapPEN"]), use_container_width=True, hide_index=True, height=420)
+
